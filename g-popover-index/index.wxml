@@ -1,0 +1,69 @@
+<!-- packages/workbranch/pages/index/index.wxml -->
+<view class="headTitle">
+    <view>{{roleName}}：</view>
+    <open-data class="mine-profile-nickname name" type="userNickName"></open-data>
+</view>
+<view class="headTitle2" wx:if="{{isGuanLiYuan||isChaYanYuan}}">
+    <image style="width:24rpx;height:24rpx;margin-right:16rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icon-address.png"></image>
+    <view class="head-title__desc">{{gridPointId?address:"无"}}</view>
+    <view bindtap='goMyPostion' class="change">
+        <image style="width:24rpx;height:24rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icon-change.png"></image>
+        切换
+    </view>
+</view>
+<!-- 交警侧的交通卡口 -->
+<view style="margin-top:24rpx" class="row txdj" bindtap='goToCarCode'>
+    <image style="width:100rpx;height:100rpx" src="/images/home/jttx.png"></image>
+    <view class="column flex1" style="margin-left:16rpx" src="/images/workbench/icontxz.png">
+        <view style="color:#000; font-size:35rpx; font-weight: 500;">交通卡口</view>
+        <view style="color:#939393;margin-top:16rpx">查看卡口通行记录</view>
+    </view>
+</view>
+<!-- 通行登记 -->
+<view style="margin-top:24rpx" class="row txdj" bindtap='handlePassScanCode' wx:if="{{isGuanLiYuan||isChaYanYuan}}">
+    <image style="width:100rpx;height:100rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icontxz.png"></image>
+    <view class="column flex1" style="margin-left:16rpx" src="/images/workbench/icontxz.png">
+        <view style="color:#000; font-size:35rpx; font-weight: 500;">通行登记</view>
+        <view style="color:#939393;margin-top:16rpx">查验查看群众通行记录</view>
+    </view>
+    <view class="column alignCenter" style=" margin-right: 32rpx">
+        <image style="width:32rpx;height:32rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icon-sm.png"></image>
+        <view style="color:#4293F4;margin-top:16rpx; ">扫码</view>
+    </view>
+</view>
+<!-- 分割栏 -->
+<view class="  box ">
+    <view class='grid'>
+        <!-- 查验员授权管理 -->
+        <view bindtap='go2jWZGL' class="column item " wx:if="{{isGuanLiYuan}}">
+            <image style="width:100rpx;height:100rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icon-cjygl.png"></image>
+            <view class="item-name">查验员授权管理</view>
+        </view>
+        <!-- 查验监控点管理 -->
+        <view bindtap='go2wljkgl' class="column item" wx:if="{{isGuanLiYuan||isChaYanYuan}}">
+            <image style="width:100rpx;height:100rpx" src="https://imgcache.gzonline.gov.cn/cos/workbench/icon-cjjkdgl.png"></image>
+            <view class="item-name">查验点管理</view>
+        </view>
+        <!-- 手动输入登记 -->
+        <view bindtap='go2Input' class="column item" wx:if="{{isGuanLiYuan||isChaYanYuan}}">
+            <image style="width:100rpx;height:100rpx" src="/images/home/icon_login@2x.png"></image>
+            <view class="item-name">手动输入登记</view>
+        </view>
+        <!-- 风险等级更改 -->
+        <view wx:if="{{isGuanLiYuan}}" bindtap='goRiskChangeScan' class="column item">
+            <image style="width:100rpx;height:100rpx" src="https://imgcache.gzonline.gov.cn/cos/riskChange_54af5c0f.png"></image>
+            <view style="color:#000;font-size:33rpx;margin:24rpx">风险等级更改</view>
+        </view>
+        <!-- 通行登记码获取 -->
+        <view bindtap='handlePassLoginCode' class="column item" wx:if="{{isKk}}">
+            <image style="width:100rpx;height:100rpx" src="/images/home/icon_get_pass_code@2x.png"></image>
+            <view style="color:#000;font-size:33rpx;margin:24rpx">通行登记码获取</view>
+        </view>
+        <!-- 管理员分级管理 -->
+        <view bindtap='go2FJGL' class="column item" wx:if="{{showCaijiAdmin}}">
+            <image style="width:100rpx;height:100rpx" src="https://imgcache.gzonline.gov.cn/cos/health/manager-icon.png"></image>
+            <view style="color:#000;font-size:33rpx;margin:24rpx">管理员分级管理</view>
+        </view>
+    </view>
+</view>
+<g-footer />

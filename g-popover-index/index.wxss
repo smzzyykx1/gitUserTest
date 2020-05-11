@@ -1,0 +1,242 @@
+/* packages/workbranch/pages/index/index.wxss */
+page {
+    background: #f2f2f2;
+  }
+  
+  .headTitle {
+    padding: 24rpx;
+    padding-top: 40rpx;
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    font-size: 44rpx;
+    background: #fff;
+  }
+  
+  .headTitle2 {
+    padding: 16rpx 24rpx;
+    padding-top: 8rpx;
+    padding-bottom: 32rpx;
+    margin-bottom: 24rpx;
+    display: flex;
+    flex-direction: row;
+    color: #666;
+    font-size: 30rpx;
+    background: #fff;
+    align-items: center;
+  }
+  
+  .change {
+    width: 118rpx;
+    color: #4293f4;
+    border-radius: 75rpx;
+    border-style: solid;
+    border-width: 1rpx;
+    border-color: #4293f4;
+    text-align: center;
+    line-height: 44rpx;
+    font-size: 26rpx;
+   
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .alignCenter {
+    align-items: center;
+  }
+  
+  .justifyCenter {
+    justify-content: center;
+  }
+  
+  .flex1 {
+    flex: 1;
+  }
+  
+  .txdj {
+    background-color: #fff;
+    margin: 0 32rpx;
+    border-radius: 10rpx;
+    padding: 32rpx;
+    align-items: center;
+  }
+   
+  .box{
+    margin-top: 16rpx;
+    margin-left: 16rpx;
+    margin-right: 16rpx;
+  }
+  .grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+  }
+  
+  .item {
+    margin: 16rpx;
+    width: calc(calc(100% / 2.2));
+    height: 217rpx;
+    display: flex;
+    border-radius: 8rpx;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border-style: solid;
+    border-width: 1rpx;
+    border-color: #d7d7d7; */
+  }
+  
+  .sk-flexbox {
+    margin: 28rpx 0;
+    width: 100%;
+    height: 245rpx;
+    padding: 40rpx 0;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  .sk-flexbox__list {
+    display: flex;
+  }
+  .sk-flexbox__item {
+    flex: 1;
+    text-align: center;
+  }
+  .sk-flexbox__pic {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto;
+  }
+  .sk-flexbox__name {
+    display: block;
+    padding-top: 20rpx;
+    font-family: PingFangSC-Semibold;
+    font-size: 32rpx;
+    color: #333333;
+    letter-spacing: 0;
+  }
+  
+  .sk-basic-list {
+    margin: 20rpx 0;
+    width: 100%;
+  }
+  .sk-basic-list__item {
+    position: relative;
+    display: flex;
+    height: 160rpx;
+    padding: 30rpx 40rpx;
+    border-bottom: 2rpx solid #ebebeb;
+    box-sizing: border-box;
+    background: #fff;
+  }
+  .sk-basic-list__item:last-child {
+    border-bottom: 0;
+  }
+  .sk-basic-list__pic {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+  }
+  .sk-basic-list__word {
+    padding-left: 24rpx;
+  }
+  .sk-basic-list__name {
+    font-family: PingFangSC-Semibold;
+    padding-top: 8rpx;
+    font-size: 32rpx;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 1.5;
+  
+  }
+  .sk-basic-list__desc {
+    opacity: 0.7;
+    font-family: PingFangSC-Regular;
+    font-size: 24rpx;
+    color: #666666;
+    padding-top: 6rpx;
+    line-height: 1.5;
+  }
+  .sk-basic-list__arrow {
+    position: absolute;
+    top: 80rpx;
+    right: 40rpx;
+    width: 26rpx;
+    height: 16rpx;
+    transform: scaleY(-1) rotate(-90deg);
+  }
+  
+  .sk-pop-layer {
+    padding: 36rpx 40rpx;
+    box-sizing: border-box;
+  }
+  .sk-pop-title {
+    padding-bottom: 30rpx;
+    /* padding: 36rpx 40rpx; */
+    /* box-sizing: border-box; */
+  }
+  .sk-pop-title .name {
+    font-family: PingFangSC-Medium;
+    font-size: 48rpx;
+    color: #000000;
+    line-height: 66rpx;
+  }
+  .sk-pop-title .tip {
+    font-family: PingFangSC-Regular;
+    font-size: 32rpx;
+    color: #999999;
+    line-height: 44rpx;
+  }
+  .sk-pop-content{
+    
+  }
+  .sk-pop-content .sk-pop-content_item{
+    padding: 20rpx 0;
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 8rpx;
+    border-radius: 8rpx;
+    font-family: PingFangSC-Regular;
+    font-size: 30rpx;
+    color: #000000;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 40rpx;
+    position: relative;
+  }
+  .sk-pop-content .sk-pop-content_item.active::after{
+      position: absolute;
+      right: 40rpx;
+      content: '当前';
+      font-family: PingFangSC-Regular;
+      font-size: 30rpx;
+      color: #999999;
+      letter-spacing: 0;
+      text-align: right;
+      line-height: 40rpx;
+  }
+  
+  .item-name {
+    color:#000;
+    font-size:33rpx;
+    padding-top: 12rpx;
+    line-height: 45rpx;
+  }
+  .head-title__desc {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding-right: 10px;
+    flex: 1;
+  }
